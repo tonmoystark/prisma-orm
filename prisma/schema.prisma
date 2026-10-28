@@ -14,3 +14,10 @@ model User {
   createdAt DateTime
   updatedAt DateTime @updatedAt
 }
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  updatedAt DateTime @updatedAt
+}

@@ -2,7 +2,7 @@
 "use client";
 
 import {
-  isServer,
+  environmentManager,
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
@@ -20,7 +20,7 @@ function makeQueryClient() {
 let browserQueryClient: QueryClient | undefined = undefined;
 
 function getQueryClient() {
-  if (isServer) {
+  if (environmentManager.isServer()) {
     // Server: always a new client (never shared between requests)
     return makeQueryClient();
   }
