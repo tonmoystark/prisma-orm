@@ -13,7 +13,7 @@ const UserCard = () => {
   if (error) return <div>Error</div>;
 
   return (
-    <div className="flex flex-1 items-center gap-3 justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-1 items-center gap-3 justify-center bg-zinc-900 font-sans dark:bg-black">
       {data?.map((user) => (
         <div className="border rounded p-4" key={user.id}>
           <h1>{user.name}</h1>
