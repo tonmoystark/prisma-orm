@@ -1,6 +1,9 @@
+import { requireUnauth } from "@/lib/auth-guard";
 import React from "react";
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+const AuthLayout = async ({ children }: { children: React.ReactNode }) => {
+  await requireUnauth();
+
   return <div>{children}</div>;
 };
 
